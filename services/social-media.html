@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Social Media Marketing | NMP Dynamics</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#14032b;
+color:#fff;
+line-height:1.7;
+}
+
+header{
+position:sticky;
+top:0;
+background:#14052f;
+padding:20px 80px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+}
+
+.logo{
+font-size:24px;
+font-weight:700;
+}
+
+.logo span{
+color:#a855f7;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+margin-left:20px;
+}
+
+nav a:hover{
+color:#c084fc;
+}
+
+.hero{
+padding:120px 80px;
+background:
+linear-gradient(rgba(13,2,33,0.92),rgba(76,29,149,0.92)),
+url('https://images.unsplash.com/photo-1611162617474-5b21e879e113');
+background-size:cover;
+background-position:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:52px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:18px;
+max-width:700px;
+margin:auto;
+color:#ddd;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:14px 30px;
+border-radius:30px;
+text-decoration:none;
+background:linear-gradient(90deg,#a855f7,#7c3aed);
+color:white;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+.container{
+padding:70px 80px;
+}
+
+.section{
+background:#1e1b4b;
+padding:35px;
+margin-bottom:35px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.section h2{
+color:#c084fc;
+margin-bottom:20px;
+font-size:28px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#2b0a4b;
+padding:25px;
+border-radius:18px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.project{
+background:#2b0a4b;
+padding:15px;
+border-radius:15px;
+}
+
+.project img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:12px;
+margin-bottom:12px;
+}
+
+.testimonials{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.testimonial{
+background:#2b0a4b;
+padding:25px;
+border-radius:18px;
+}
+
+.faq h3{
+margin-top:20px;
+color:#c084fc;
+}
+
+.cta{
+text-align:center;
+padding:60px 20px;
+}
+
+.footer{
+text-align:center;
+padding:20px;
+background:#090114;
+color:#ccc;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+width:60px;
+height:60px;
+background:#25D366;
+color:#fff;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+font-size:30px;
+text-decoration:none;
+}
+
+@media(max-width:768px){
+header{
+padding:20px;
+flex-direction:column;
+gap:15px;
+}
+.hero{
+padding:100px 25px;
+}
+.hero h1{
+font-size:38px;
+}
+.container{
+padding:50px 20px;
+}
+}
+.project video{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:12px;
+margin-bottom:12px;
+}
+.clickable-img{
+cursor:pointer;
+transition:0.3s;
+}
+
+.clickable-img:hover{
+transform:scale(1.03);
+}
+
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.modal-content{
+max-width:90%;
+max-height:85%;
+border-radius:15px;
+}
+
+.close{
+position:absolute;
+top:20px;
+right:35px;
+font-size:45px;
+color:white;
+cursor:pointer;
+}
+.clickable-video{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:12px;
+cursor:pointer;
+}
+
+.video-modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.95);
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+#modalVideo{
+width:80%;
+max-height:85%;
+border-radius:20px;
+}
+
+.close-video{
+position:absolute;
+top:20px;
+right:35px;
+font-size:45px;
+color:white;
+cursor:pointer;
+}
+.client-logo{
+width:90px;
+height:90px;
+object-fit:contain;
+background:white;
+padding:10px;
+border-radius:15px;
+margin:0 auto 20px;
+display:block;
+}
+
+.site-btn{
+display:inline-block;
+margin-top:15px;
+padding:10px 20px;
+background:#a855f7;
+color:white;
+text-decoration:none;
+border-radius:25px;
+font-size:14px;
+transition:.3s;
+}
+
+.site-btn:hover{
+background:#7c3aed;
+transform:translateY(-3px);
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">NMP <span>Dynamics</span></div>
+
+<nav>
+<a href="../index.html">Home</a>
+<a href="../index.html#services">Services</a>
+<a href="../index.html#portfolio">Portfolio</a>
+<a href="../index.html#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Social Media Marketing</h1>
+<p>
+Helping businesses and personal brands grow online through strategy,
+content creation, engagement and digital campaigns.
+</p>
+<a href="../index.html#contact" class="btn">Work With Me</a>
+</section>
+
+<div class="container">
+    <div class="section">
+<h2>What I Do</h2>
+<p>
+I help brands build a strong online presence by creating engaging content,
+managing social media pages, planning campaigns and improving audience engagement.
+My goal is to turn followers into loyal customers.
+</p>
+</div>
+
+<div class="section">
+<h2>Services Included</h2>
+<ul>
+<li>Social Media Account Setup & Optimization</li>
+<li>Content Creation (Posts, Reels, Stories)</li>
+<li>Content Calendar Planning</li>
+<li>Caption Writing & Hashtag Strategy</li>
+<li>Community Management</li>
+<li>Meta Ads Campaign Setup & Optimization</li>
+<li>Performance Monitoring & Reporting</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Platforms I Work With</h2>
+<div class="cards">
+<div class="card">Instagram Marketing</div>
+<div class="card">Facebook Marketing</div>
+<div class="card">TikTok Growth</div>
+<div class="card">LinkedIn Branding</div>
+<div class="card">WhatsApp Business</div>
+</div>
+</div>
+
+<div class="section">
+<h2>Tools I Use</h2>
+<div class="cards">
+<div class="card">Canva</div>
+<div class="card">Meta Business Suite</div>
+<div class="card">CapCut</div>
+<div class="card">ChatGPT</div>
+<div class="card">Google Trends</div>
+<div class="card">Analytics Tools</div>
+</div>
+</div>
+
+<div class="section">
+<h2>My Process</h2>
+<ol>
+<li>Understand your brand and target audience</li>
+<li>Create a strategy and content plan</li>
+<li>Design content and schedule posts</li>
+<li>Monitor engagement and optimize performance</li>
+<li>Provide reports and recommendations</li>
+</ol>
+</div>
+
+<div class="section">
+<h2>Why Choose NMP Dynamics?</h2>
+<ul>
+<li>Creative and strategic content creation</li>
+<li>Tech + marketing background</li>
+<li>Affordable packages for startups & SMEs</li>
+<li>Data-driven decisions</li>
+<li>Personalized support</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Results I've Delivered</h2>
+<div class="cards">
+<div class="card">
+<h3>+150%</h3>
+<p>Instagram Reach Growth</p>
+</div>
+
+<div class="card">
+<h3>+80%</h3>
+<p>Engagement Increase</p>
+</div>
+
+<div class="card">
+<h3>+40%</h3>
+<p>Lead Generation Growth</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<h2>Pricing Packages</h2>
+<div class="cards">
+<div class="card">
+<h3>Starter</h3>
+<h4>KSh 15,000/month</h4>
+<ul>
+<li>12 posts/month</li>
+<li>1 platform</li>
+<li>Basic reporting</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Growth</h3>
+<h4>KSh 30,000/month</h4>
+<ul>
+<li>20 posts/month</li>
+<li>2-3 platforms</li>
+<li>Ads management</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Premium</h3>
+<h4>KSh 50,000/month</h4>
+<ul>
+<li>Daily content</li>
+<li>Full strategy</li>
+<li>Weekly analytics</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="section">
+<h2>My Work</h2>
+<div class="projects">
+
+<div class="project">
+<img src="../images/p3.jpeg" alt="" class="clickable-img">
+<h3>Social Media Post Design</h3>
+<p>Designed engaging promotional creatives for higher reach and engagement.</p>
+</div>
+
+<div class="project">
+<img src="../images/content calendar.png" alt="" class="clickable-img">
+<h3>Content Calendar Strategy</h3>
+<p>Planned monthly content strategy for consistent posting and visibility.</p>
+</div>
+
+<div class="project">
+<img src="../images/free brand audit.jpeg" alt="" class="clickable-img">
+<h3>Ad Creative Design</h3>
+<p>Designed Meta ad creatives optimized for conversions.</p>
+</div>
+<div class="project">
+    <img src="../images/digital marketing and web May 12, 2025, 11_38_32 AM.png" alt="Social Media Design" class="clickable-img">
+    <h3>Social Media Design</h3>
+    <p>Instagram promotional creative.</p>
+</div>
+<div class="project">
+ <video class="clickable-video">
+<source src="../images/promotional reel.mp4" type="video/mp4" class="clickable-img">
+</video>
+<h3>Promotional Reel</h3>
+<p>Short-form video content for awareness and engagement.</p>
+</div>
+<div id="videoModal" class="video-modal">
+    <span class="close-video">&times;</span>
+    <video id="modalVideo" controls></video>
+</div>
+<div class="project">
+<img src="../images/marketing_campaign_dashboard_for_measuring_performance_slide01.jpg" alt="" class="clickable-img">
+<h3>Performance Analytics</h3>
+<p>Campaign results showing growth in reach, engagement and leads.</p>
+</div>
+
+<div class="project">
+<img src="../images/NMP DYNAMICS LOGO results jirani electronics.png" alt="" class="clickable-img">
+<h3>Before & After Growth</h3>
+<p>Brand transformation through strategy and consistency.</p>
+</div>
+
+</div>
+</div>
+
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img id="modalImg" class="modal-content">
+</div>
+<div class="section">
+    <h2>Client Testimonials</h2>
+
+    <div class="testimonials">
+
+        <div class="testimonial">
+            <img src="../images/mekaforge logo.jpeg" alt="Mekaforge Skills Logo" class="client-logo">
+
+            <p>
+                "NMP Dynamics transformed our brand visuals completely.
+                Very professional and creative."
+            </p>
+
+            <h4>Mekaforge Skills</h4>
+
+            <a href="https://mekaforgeskillsacademy.netlify.app" target="_blank" class="site-btn">
+                Visit Website
+            </a>
+        </div>
+
+        <div class="testimonial">
+            <img src="../images/skystream networks logo.jpeg" alt="Skystream Logo" class="client-logo">
+
+            <p>
+                "Our social media engagement increased significantly
+                after working together."
+            </p>
+
+            <h4>Skystream Cyber Networks</h4>
+
+            <a href="https://skystream.co.ke" target="_blank" class="site-btn">
+                Visit Website
+            </a>
+        </div>
+
+        <div class="testimonial">
+            <img src="../images/Bloom and bold logo judy shop logo transformation.png" alt="Client Logo" class="client-logo">
+
+            <p>
+                "Highly recommended. Great communication and results."
+            </p>
+
+            <h4>Client Brand</h4>
+
+            <a href="#" class="site-btn">
+                View Brand
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<div class="section faq">
+<h2>Frequently Asked Questions</h2>
+
+<h3>How soon can I see results?</h3>
+<p>Organic growth usually takes 1–3 months depending on consistency.</p>
+
+<h3>Do you create content?</h3>
+<p>Yes. I create graphics, captions, reels and content calendars.</p>
+
+<h3>Do you run ads?</h3>
+<p>Yes, including Meta ads for brand awareness and lead generation.</p>
+</div>
+</div> <!-- End container -->
+
+<section class="cta">
+<h2>Ready to Grow Your Brand?</h2>
+<p>
+Let’s turn your social media into a powerful marketing machine that drives visibility, engagement and sales.
+</p>
+<a href="../index.html#contact" class="btn">Book Free Consultation</a>
+</section>
+
+<script>
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImg");
+const images = document.querySelectorAll(".clickable-img");
+const closeBtn = document.querySelector(".close");
+
+images.forEach(img=>{
+    img.addEventListener("click", function(){
+        modal.style.display="flex";
+        modalImg.src=this.src;
+    });
+});
+
+closeBtn.onclick=function(){
+    modal.style.display="none";
+}
+
+modal.onclick=function(e){
+    if(e.target===modal){
+        modal.style.display="none";
+    }
+}
+</script>
+<script>
+const videoModal = document.getElementById("videoModal");
+const modalVideo = document.getElementById("modalVideo");
+const videos = document.querySelectorAll(".clickable-video");
+const closeVideo = document.querySelector(".close-video");
+
+videos.forEach(video=>{
+    video.addEventListener("click", function(){
+        const source = this.querySelector("source").src;
+        modalVideo.src = source;
+        videoModal.style.display = "flex";
+        modalVideo.play();
+    });
+});
+
+closeVideo.onclick = function(){
+    videoModal.style.display = "none";
+    modalVideo.pause();
+    modalVideo.currentTime = 0;
+};
+
+videoModal.onclick = function(e){
+    if(e.target === videoModal){
+        videoModal.style.display = "none";
+        modalVideo.pause();
+        modalVideo.currentTime = 0;
+    }
+};
+</script>
+<footer class="footer">
+© 2026 NMP Dynamics. All Rights Reserved.
+</footer>
+
+<a href="https://wa.me/254757986823" class="whatsapp">
+💬
+</a>
+
+</body>
+</html>

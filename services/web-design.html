@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Design | NMP Dynamics</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+body{
+font-family:Poppins;
+margin:0;
+background:#0f0a28;
+color:white;
+}
+header{
+position:sticky;
+top:0;
+background:#14052f;
+padding:20px 80px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+}
+.logo{
+font-size:24px;
+font-weight:700;
+}
+
+.logo span{
+color:#a855f7;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+margin-left:20px;
+}
+
+nav a:hover{
+color:#c084fc;
+}
+.hero{
+padding:120px 80px;
+background:
+linear-gradient(rgba(13,2,33,0.92),rgba(76,29,149,0.92)),
+url('https://images.unsplash.com/photo-1611162617474-5b21e879e113');
+background-size:cover;
+background-position:center;
+text-align:center;
+}
+
+
+.hero h1{
+font-size:52px;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:800px;
+margin:auto;
+color:#ddd;
+font-size:18px;
+}
+.container{padding:60px;}
+.section{margin-bottom:40px;}
+.card{
+background:#1e1b4b;
+padding:20px;
+border-radius:15px;
+margin-bottom:20px;
+}
+ul li{margin:10px 0;}
+a{
+display:inline-block;
+padding:12px 24px;
+background:#a855f7;
+color:white;
+text-decoration:none;
+border-radius:30px;
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:#0f0a28;
+color:white;
+line-height:1.7;
+}
+
+.container{
+padding:70px 80px;
+}
+
+.section{
+background:#1e1b4b;
+padding:35px;
+margin-bottom:35px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+.section h2{
+color:#c084fc;
+margin-bottom:20px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#2b0a4b;
+padding:25px;
+border-radius:18px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+.clickable-img{
+cursor:pointer;
+transition:0.3s;
+}
+
+.clickable-img:hover{
+transform:scale(1.03);
+}
+
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.modal-content{
+max-width:90%;
+max-height:85%;
+border-radius:15px;
+}
+
+.close{
+position:absolute;
+top:20px;
+right:35px;
+font-size:45px;
+color:white;
+cursor:pointer;
+}
+.site-btn{
+display:inline-block;
+margin-top:15px;
+padding:10px 20px;
+background:#a855f7;
+color:white;
+text-decoration:none;
+border-radius:25px;
+font-size:14px;
+transition:.3s;
+}
+
+.site-btn:hover{
+background:#7c3aed;
+transform:translateY(-3px);
+}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">NMP <span>Dynamics</span></div>
+
+<nav>
+<a href="../index.html">Home</a>
+<a href="../index.html#services">Services</a>
+<a href="../index.html#portfolio">Portfolio</a>
+<a href="../index.html#contact">Contact</a>
+</nav>
+</header>
+<section class="hero">
+<h1>Website Design & Development</h1>
+<p>I build modern, responsive and business-focused websites.</p>
+</div>
+<a href="../index.html#contact" class="btn">Work With Me</a>
+</section>
+<div class="container">
+
+<div class="section">
+<h2>Services Included</h2>
+<div class="card">
+<ul>
+<li>Business Websites</li>
+<li>Portfolio Websites</li>
+<li>Landing Pages</li>
+<li>E-commerce Websites</li>
+<li>WordPress Design</li>
+<li>Website Redesign</li>
+<li>Responsive Mobile Design</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+<h2>Tools I Use</h2>
+<div class="card">
+<p>HTML, CSS, JavaScript, PHP, WordPress, Elementor, VS Code, Figma</p>
+</div>
+</div>
+
+<div class="section">
+<h2>My Process</h2>
+<div class="card">
+<ol>
+<li>Understand your business goals</li>
+<li>Create wireframe/layout</li>
+<li>Design & develop website</li>
+<li>Testing and optimization</li>
+<li>Launch and support</li>
+</ol>
+</div>
+</div>
+<div class="section">
+<h2>Why Choose NMP Dynamics?</h2>
+<div class="cards">
+<div class="card">Custom PHP Development</div>
+<div class="card">WordPress Expertise</div>
+<div class="card">Mobile Responsive Design</div>
+<div class="card">SEO Friendly Websites</div>
+<div class="card">Fast Loading Speed</div>
+<div class="card">Ongoing Support</div>
+</div>
+</div>
+
+<div class="section">
+<h2>Features I Build</h2>
+<div class="cards">
+<div class="card">Admin Dashboards</div>
+<div class="card">Login & Registration Systems</div>
+<div class="card">Payment Integration</div>
+<div class="card">Booking Systems</div>
+<div class="card">Contact Forms</div>
+<div class="card">Reports & Analytics</div>
+</div>
+</div>
+
+<div class="section">
+<h2>My Work</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="../images/universal cleaner logo.jpeg" style="width:100%; height:200px; object-fit:cover; border-radius:12px;" class="clickable-img">
+<h3>Business Website</h3>
+<p>Responsive corporate website designed for lead generation.</p>
+ <a href="https://linkkkee.netlify.app" target="_blank" class="site-btn">
+     Visit Website
+</a>
+</div>
+
+<div class="card">
+<img src="../images/figma UI.png" style="width:100%; height:200px; object-fit:cover; border-radius:12px;" class="clickable-img">
+<h3>Website UI Design</h3>
+<p>Modern UI/UX design created in Figma.</p>
+</div>
+
+<div class="card">
+<img src="../images/NMP business home wordpresss.png" style="width:100%; height:200px; object-fit:cover; border-radius:12px;" class="clickable-img">
+<h3>WordPress Website</h3>
+<p>Digital Marketing Agency.</p>
+</div>
+
+<div class="card">
+<img src="../images/wordpress site 1.png" style="width:100%; height:200px; object-fit:cover; border-radius:12px;" class="clickable-img">
+<h3>WordPress Website</h3>
+<p>Struggling to grow your business online.</p>
+</div>
+
+<div class="card">
+<img src="../images/NMP business about us wordpresss.png" style="width:100%; height:200px; object-fit:cover; border-radius:12px;" class="clickable-img">
+<h3>WordPress Website</h3>
+<p>About Us.</p>
+</div>
+
+<div class="card">
+<img src="../images/NMP business contact wordpresss.png" style="width:100%; height:200px; object-fit:cover; border-radius:12px;" class="clickable-img">
+<h3>WordPress Website</h3>
+<p>Contact.</p>
+</div>
+
+<div class="card">
+<img src="../images/NMP business why people choose us wordpresss.png" style="width:100%; height:200px; object-fit:cover; border-radius:12px;" class="clickable-img">
+<h3>WordPress Website</h3>
+<p>Why Choose Us.</p>
+</div>
+
+<div class="card">
+<img src="../images/NMP business about wordpresss.png" style="width:100%; height:200px; object-fit:cover; border-radius:12px;" class="clickable-img">
+<h3>WordPress Website</h3>
+<p>About.</p>
+</div>
+
+<div class="card">
+<img src="../images/wordpress site 2.png" style="width:100%; height:200px; object-fit:cover; border-radius:12px;" class="clickable-img">
+<h3>WordPress Website</h3>
+<p>Digital Marketing Agency.</p>
+</div>
+
+<div class="card">
+<img src="../images/wordpress site 3.png" style="width:100%; height:200px; object-fit:cover; border-radius:12px;" class="clickable-img">
+<h3>WordPress Website</h3>
+<p>Digital Marketing Agency.</p>
+</div>
+
+<div class="card">
+<img src="../images/WordPress Web Design by NMP Dynamics.png" style="width:100%; height:200px; object-fit:cover; border-radius:12px;" class="clickable-img">
+<h3>WordPress Website</h3>
+<p>Digital Marketing Agency.</p>
+</div>
+
+<div class="card">
+<img src="../images/business finder logo.png" style="width:100%; height:200px; object-fit:cover; border-radius:12px;" class="clickable-img">
+<h3>Business Finder Platform</h3>
+<p>Custom PHP system with dashboard and reporting</p>
+ <a href="https://local-business-finder45.netlify.app" target="_blank" class="site-btn">
+     Visit Website
+</a>
+</div>
+
+<div class="card">
+<img src="../images/nmp logo.png" style="width:100%; height:200px; object-fit:cover; border-radius:12px;" class="clickable-img">
+<h3>NMP Dynamics Business Platform</h3>
+<p>Business listing platform with approval workflow.
+</p>
+ <a href="https://nmpdynamicsdigitalsolution.netlify.app" target="_blank" class="site-btn">
+     Visit Website
+</a>
+</div>
+
+</div>
+</div>
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img id="modalImg" class="modal-content">
+</div>
+<div class="section">
+<h2>Client Feedback</h2>
+
+<div class="cards">
+<div class="card">
+<p>"Professional developer and delivers quality websites."</p>
+<h4>- Client A</h4>
+</div>
+
+<div class="card">
+<p>"Our website now looks modern and performs well."</p>
+<h4>- Client B</h4>
+</div>
+</div>
+</div>
+<div class="section" style="text-align:center;">
+<h2>Need a Website for Your Business?</h2>
+<p>Let's build a modern website that grows your business.</p>
+<br>
+<a href="../index.html#contact">Work With Me</a>
+</div>
+<a href="../index.html#contact">Contact Me</a>
+
+</div>
+
+<script>
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImg");
+const images = document.querySelectorAll(".clickable-img");
+const closeBtn = document.querySelector(".close");
+
+images.forEach(img=>{
+    img.addEventListener("click", function(){
+        modal.style.display="flex";
+        modalImg.src=this.src;
+    });
+});
+
+closeBtn.onclick=function(){
+    modal.style.display="none";
+}
+
+modal.onclick=function(e){
+    if(e.target===modal){
+        modal.style.display="none";
+    }
+}
+</script>
+</body>
+</html>
